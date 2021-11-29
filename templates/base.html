@@ -9,11 +9,42 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     {% block styles %}
     {% endblock %}
     <title>It's All About The Sous</title>
 </head>
 <body>
+
+    <header>
+        <!-- top navbar -->
+        <nav class="nav-extended text-shadow custom-green darken-4">
+            <div class="nav-wrapper">
+                <a href="{{ url_for('get_recipes') }}" class="brand-logo">Its All About The Sous</a>
+                <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Profile</a></li>
+                    <li><a href="#">New Recipe</a></li>
+                    <li><a href="#">Manage Categories</a></li>
+                    <li><a href="#">Logout</a></li>
+                    <li><a href="#">Log In</a></li>
+                    <li><a href="#">Register</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- mobile navbar -->
+        <ul class="sidenav" id="mobile-demo">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">New Recipe</a></li>
+            <li><a href="#">Manage Categories</a></li>
+            <li><a href="#">Logout</a></li>
+            <li><a href="#">Log In</a></li>
+            <li><a href="#">Register</a></li>
+        </ul>
+    </header>
 
     {% block content %}
     {% endblock %}
