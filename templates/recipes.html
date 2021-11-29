@@ -1,14 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
+<ul class="collapsible popout">
     {% for recipe in recipes %}
-        {{ recipe.recipe_name }}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.secret_ingredients }}<br>
-        {{ recipe.instructions }}<br>
-        {{ recipe.serving_suggestions }}<br>
-        {{ recipe.secret_public }}<br>
+    <li>
+        <div class="collapsible-header white-text custom-green darken-4 text-shadow">
+            
+            <div class="col s9">
+                <strong>{{ recipe.recipe_name }}</strong>
+                {% if recipe.secret_public == "on" %}
+                <i class="material-icons white-text text-darken-4 tooltipped" data-position="right"
+                    data-tooltip="Private">lock_outline</i>
+                {% endif %}
+            </div>
+        </div>
+        <div class="collapsible-body">
+            <h6>Category:</h6>
+            <strong>{{ recipe.category_name }}</strong>
+            <h6>Ingredients:</h6>
+            <p>{{ recipe.ingredients }}</p>
+            {% if recipe.secret_public == "off" %}
+                <h6>Secret Ingredients:</h6>
+                <p>{{ recipe.secret_ingredients }}</p>
+            {% endif %}
+            <h6>Instructions:</h6>
+            <p>{{ recipe.instructions }}</p>
+            <h6>Serving Suggestions:</h6>
+            <p>{{ recipe.serving_suggestions }}</p>
+            <p><em>Created by: {{ recipe.created_by }}</em></p>
+        </div>
+    </li>
     {% endfor %}
+</ul>
 
 {% endblock %}
