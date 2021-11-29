@@ -1,3 +1,23 @@
+body {
+    background-color: #F4F5F0;
+}
+
 .custom-green {
     background-color: #008C45;
+}
+
+.custom-green-text {
+    color: #008C45;
+}
+
+.custom-red {
+    background-color: #CD212A;
+}
+
+.custom-red-text {
+    color: #CD212A;
+}
+
+.custom-white {
+    background-color: #F4F5F0;
 }
