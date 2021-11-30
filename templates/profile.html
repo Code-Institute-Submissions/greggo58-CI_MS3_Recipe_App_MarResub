@@ -7,6 +7,10 @@
             <h3 class="center-align purple-text text-darken-4">
                 {{ username }}'s account
             </h3>
+            <div class="card-action center">
+                <a href="{{ url_for('delete_profile', username=username) }}" class="btn-small purple accent-4">Delete account</a>
+            </div>
+            <p class="center"><em>NOTE: Your recipes will remain even after deleting your account.</em></p>
         </div>
     </div>
 </div>

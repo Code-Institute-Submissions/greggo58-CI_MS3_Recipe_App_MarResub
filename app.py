@@ -187,6 +187,13 @@ def delete_category(category_id):
     return redirect(url_for("get_categories"))
 
 
+@app.route("/delete_profile/<username>")
+def delete_profile(username):
+    mongo.db.users.delete_one({"username": username})
+    flash("Account successfully deleted.")
+    return redirect(url_for("logout"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
