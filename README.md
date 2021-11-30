@@ -1,6 +1,6 @@
 <h1 align="center">Its All About The Sauce Website</h1>
 
-[View the live project here.](https://greggo58.github.io/CI_MS3_Recipe_App/)
+[View the live project here on Heroku.](https://ci-ms3-recipe-app.herokuapp.com/)
 
 This is a peer sharing recipe application to be used by anyone wishing to get, share, or store recipes.
 
