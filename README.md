@@ -33,17 +33,17 @@ This is a peer sharing recipe application to be used by anyone wishing to get, s
 
 *   ### Wireframes
 
-    -   Home Page (public) Wireframe - [View](https://github.com/)
+    -   Home Page (public) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/Home%20screen%20-%20private.png)
 
-    -   Home Page (private) Wireframe - [View](https://github.com/)
+    -   Home Page (private) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/Home%20screen%20-%20private.png)
 
-    -   Login Page (public) Wireframe - [View](https://github.com/)
+    -   Login Page (public) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/Login%20screen%20-%20private.png)
 
-    -   Register Page (public) Wireframe - [View](https://github.com/)
+    -   Register Page (public) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/Register%20screen%20-%20private.png)
 
-    -   Account Page (private) Wireframe - [View](https://github.com/)
+    -   Account Page (private) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/Account%20screen%20-%20private.png)
 
-    -   New Recipe Page (private) Wireframe - [View](https://github.com/)
+    -   New Recipe Page (private) Wireframe - [View](https://github.com/greggo58/CI_MS3_Recipe_App/blob/main/wireframes/New%20Recipe%20screen%20-%20private.png)
 
 ## Features
 
