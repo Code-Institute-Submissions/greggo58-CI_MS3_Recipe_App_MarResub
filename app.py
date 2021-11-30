@@ -118,6 +118,35 @@ def add_recipe():
     return render_template("add_recipe.html", categories=categories)
 
 
+@app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+def edit_recipe(recipe_id):
+    if request.method == "POST":
+        secret_public = "off" if request.form.get("secret_public") else "on"
+        submit = {"$set": {
+            "category_name": request.form.get("category_name"),
+            "recipe_name": request.form.get("recipe_name"),
+            "ingredients": request.form.get("ingredients"),
+            "secret_ingredients": request.form.get("secret_ingredients"),
+            "instructions": request.form.get("instructions"),
+            "serving_suggestions": request.form.get("serving_suggestions"),
+            "secret_public": secret_public,
+            "created_by": session["user"]
+        }}
+        mongo.db.recipes.update_one({"_id": ObjectId(recipe_id)}, submit)
+        flash("recipe successfully updated")
+
+    recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_recipe.html", recipe=recipe, categories=categories)
+
+
+@app.route("/delete_recipe/<recipe_id>")
+def delete_recipe(recipe_id):
+    mongo.db.recipes.delete_one({"_id": ObjectId(recipe_id)})
+    flash("Recipe successfully deleted")
+    return redirect(url_for("get_recipes"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
