@@ -5,7 +5,7 @@
 
     <div class="row">
         <div class="co s12 center-align">
-            <a href="#" class="btn-large deep-purple darken-4 text-shadow">Add Category&nbsp;&nbsp;&nbsp;<i
+            <a href="{{ url_for('add_category') }}" class="btn-large deep-purple darken-4 text-shadow">Add Category&nbsp;&nbsp;&nbsp;<i
                 class="material-icons white-text text-darken-4">library_add</i></button></a>
         </div>
     </div>
@@ -18,8 +18,8 @@
                     <span class="card-title">{{ category.category_name }}</span>
                 </div>
                 <div class="card-action">
-                    <a href="" class="btn-small purple accent-4">Delete</a>
-                    <a href="" class="btn-small orange accent-4">Edit</a>
+                    <a href="{{ url_for('delete_category', category_id=category._id) }}" class="btn-small purple accent-4">Delete</a>
+                    <a href="{{ url_for('edit_category', category_id=category._id) }}" class="btn-small orange accent-4">Edit</a>
                 </div>
             </div>
         </div>
