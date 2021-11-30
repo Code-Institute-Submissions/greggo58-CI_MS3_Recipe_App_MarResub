@@ -1,10 +1,10 @@
 <h1 align="center">Its All About The Sauce Website</h1>
 
-[View the live project here.](https://codeinstitute.net)
+[View the live project here.](https://greggo58.github.io/CI_MS3_Recipe_App/)
 
 This is a peer sharing recipe application to be used by anyone wishing to get, share, or store recipes.
 
-<h2 align="center"><img src=""></h2>
+<h2 align="center"><img src="https://cdn.pixabay.com/photo/2016/12/31/09/17/food-1942403_960_720.jpg"></h2>
 
 ## User Experience (UX)
 
