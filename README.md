@@ -1,4 +1,4 @@
-<h1 align="center">Its All About The Sauce Website</h1>
+<h1 align="center">All About The Sauce Recipe Storing and Sharing Website Application</h1>
 
 [View the live project here on Heroku.](https://ci-ms3-recipe-app.herokuapp.com/)
 
