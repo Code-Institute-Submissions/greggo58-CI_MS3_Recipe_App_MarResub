@@ -3,6 +3,7 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.tooltipped').tooltip();
     $('select').formSelect();
+    $('.parallax').parallax();
 
     validateMaterializeSelect();
     function validateMaterializeSelect() {

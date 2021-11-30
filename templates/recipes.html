@@ -1,6 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="parallax-container">
+    <div class="parallax">
+        <img src="https://cdn.pixabay.com/photo/2016/12/31/09/17/food-1942403_960_720.jpg" alt="italian pasta dish">
+    </div>
+</div>
+
 <div class="row card-panel grey lighten-5">
     <form action="{{ url_for('search') }}" method="post" class="col s12">
         <div class="row valign-wrapper center-align">
