@@ -166,6 +166,67 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+### Heroku
+
+[Heroku - Github Integration](https://devcenter.heroku.com/articles/github-integration)
+
+#### **Enabling GitHub Integration**
+You can configure GitHub integration in the **Deploy** tab of apps in the [Heroku Dashboard](https://dashboard.heroku.com/).
+
+<img src="https://devcenter1.assets.heroku.com/article-images/2349-imported-1443570588-2349-imported-1443555058-421-original.jpg">
+
+To configure GitHub integration, you have to authenticate with GitHub. You only have to do this once per Heroku account.
+
+>GitHub repo admin access is required for you to configure automatic GitHub deploys. This is because Heroku has to register a service hook on the GitHub repo, and this action requires admin access. For GitHub organisations, your GitHub account will also need to be a member of the organisation and not an outside collaborator.
+
+>If your repo is in a GitHub organization that has third-party application restrictions enabled, an organization admin needs to approve Heroku for use with the organization. More details are available on GitHub.
+
+After you link your Heroku app to a GitHub repo, you can selectively deploy from branches or configure auto-deploys.
+
+If you do not have any apps, you must approve integration for your organization from GitHub. For more information about this process, see Approving OAth Apps for your organization.
+
+#### **Manual Deploys**
+With manual deploys, you can create an immediate deployment of any branch from the GitHub repo that’s connected to your app. Use manual deploys if you want to control when changes are deployed to Heroku.
+
+<img src="https://devcenter1.assets.heroku.com/article-images/2349-imported-1443570589-2349-imported-1443555058-422-original.jpg">
+
+You can also use manual deploys to temporarily deploy a branch other than the one that’s configured for automatic deployment. For example, you might have a development app synced to the **development** GitHub branch, but you temporarily want to test a feature branch. Simply trigger a manual deploy of the feature branch to test it on the Heroku app. Note that release of the feature branch is overwritten on the next successful GitHub push to the **development** branch.
+
+#### **Automatic Deploys**
+When you enable automatic deploys for a GitHub branch, Heroku builds and deploys all pushes to that branch. If, for example, you have a development app on Heroku, you can configure pushes to your GitHub development branch to be automatically built and deployed to that app.
+
+<img src="https://devcenter3.assets.heroku.com/article-images/2349-imported-1443570589-2349-imported-1443555058-423-original.jpg">
+
+If you’ve configured your GitHub repo to use automated Continuous Integration (with Travis CI, for example), you can check the “Wait for CI to pass before deploy” checkbox. When enabled, Heroku will only auto-deploy after all the commit statuses of the relevant commit show **success**.
+
+This commit won’t auto-deploy because one of the checks shows a **pending** status:<img src="https://devcenter3.assets.heroku.com/article-images/1516299367-Screen-Shot-2018-01-18-at-9.35.09-AM.png">
+
+This commit will auto-deploy because all of the checks show a status of success:<img src="https://devcenter0.assets.heroku.com/article-images/1516299538-Screen-Shot-2018-01-18-at-10.12.16-AM.png">
+
+#### **Review Apps**
+With review apps enabled for a Heroku app, Heroku will create temporary test apps for each pull request that’s opened on the GitHub repo that’s connected to the parent app. Review apps are great if you’re using [GitHub Flow](https://guides.github.com/introduction/flow/) to propose, discuss, and merge changes to your code base. Because pull request branches are deployed to new apps on Heroku, it’s very simple for you and your collaborators to test and debug code branches. You can also run automated integration tests on the Heroku app representing a GitHub branch.
+
+See the [Review apps article](https://devcenter.heroku.com/articles/github-integration-review-apps) for details.
+
+#### **Heroku CI**
+Once you’ve connected your GitHub repo to your Pipeline, you can turn on Heroku CI, our visual, low-configuration test runner that integrates easily with Heroku Pipelines (and so complements Review apps, existing Heroku apps, and our GitHub integrations). Any Heroku Pipeline is already Heroku CI ready – just turn it on in the Pipeline’s Settings tab.
+
+#### **Links to Diffs**
+For apps that are linked to GitHub repos, releases in the Dashboard Activity tab will include a “View Diff” link. Following the link will take you to the GitHub comparison view, showing the changes made since the last release.
+
+<img src="https://devcenter0.assets.heroku.com/article-images/2349-imported-1443570590-2349-imported-1443555059-411-original.jpg">
+
+#### **Disconnecting from GitHub**
+Disconnecting Individual Apps
+Individual apps can be disconnected in the GitHub pane of the **Deploy** tab for the app.
+
+<img src="https://devcenter3.assets.heroku.com/article-images/2349-imported-1443570591-2349-imported-1443555059-434-original.jpg">
+
+#### **Disconnecting Account**
+You can disconnect your Heroku and GitHub accounts in the [Applications pane on your Dashboard account page](https://dashboard.heroku.com/account/applications#third-party-applications).
+
+<img src="https://devcenter2.assets.heroku.com/article-images/1576871458-Screen-Shot-on-2019-12-20-at-11-50-08.png">
+
 ## Credits
 
 ### Code
